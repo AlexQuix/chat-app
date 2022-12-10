@@ -1,0 +1,32 @@
+$dark-mode-map: (
+	"dark-mode-bg": (
+		property: background-color,
+		class: "dark-bg",
+		values: $custom-colors,
+	),
+	"dark-mode-color": (
+		property: color,
+		class: "dark",
+		values: $custom-colors,
+	),
+	"dark-mode-border-color": (
+		property: border-color,
+		class: "dark-bd",
+		values: $custom-colors,
+	),
+);
+
+@each $key, $map in $dark-mode-map {
+	$property: map-get($map, "property");
+	$class: map-get($map, "class");
+	$color-map: map-get($map, "values");
+
+	@each $color-name, $color-value in $color-map {
+		.app.dark .#{$class}-#{$color-name} {
+			#{$property}: $color-value !important;
+		}
+		.app.dark .#{$class}-#{$color-name}-hover:hover {
+			#{$property}: $color-value !important;
+		}
+	}
+}

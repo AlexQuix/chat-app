@@ -1,0 +1,75 @@
+:root {
+	--prim-900: hsl(235, 90%, 65%);
+	--prim-800: hsl(235, 90%, 70%);
+	--prim-700: hsl(235, 90%, 75%);
+	--prim-600: hsl(235, 90%, 80%);
+	--prim-500: hsl(235, 90%, 85%);
+	--prim-400: hsl(235, 90%, 90%);
+	--prim-300: hsl(235, 90%, 95%);
+	--prim-200: hsl(235, 90%, 98%);
+	--prim-100: hsl(235, 90%, 99%);
+
+	--white: #fff;
+	--black: #303030;
+	--red: #dc3545;
+	--green: #198754;
+
+	--gray-100: #f8f9fa;
+	--gray-200: #e9ecef;
+	--gray-300: #dee2e6;
+	--gray-400: #ced4da;
+	--gray-500: #adb5bd;
+	--gray-600: #6c757d;
+	--gray-700: #495057;
+	--gray-800: #343a40;
+	--gray-900: #212529;
+
+	--shadow-color: #{transparentize(hsl(235, 90%, 65%), 0.8)};
+}
+
+$custom-colors: (
+	// primary color
+	"prim-900": var(--prim-900),
+	"prim-800": var(--prim-800),
+	"prim-700": var(--prim-700),
+	"prim-600": var(--prim-600),
+	"prim-500": var(--prim-500),
+	"prim-400": var(--prim-400),
+	"prim-300": var(--prim-300),
+	"prim-200": var(--prim-200),
+	"prim-100": var(--prim-100),
+	// gray
+	"gray-900": var(--gray-900),
+	"gray-800": var(--gray-800),
+	"gray-700": var(--gray-700),
+	"gray-600": var(--gray-600),
+	"gray-500": var(--gray-500),
+	"gray-400": var(--gray-400),
+	"gray-300": var(--gray-300),
+	"gray-200": var(--gray-200),
+	"gray-100": var(--gray-100),
+	// red
+	"white": var(--white),
+	"red": var(--red),
+	"black": var(--black),
+	"green": var(--green)
+);
+
+// pagination
+$pagination-color: var(--prim-600);
+$pagination-bg: var(--white);
+
+$pagination-active-color: var(--prim-900);
+$pagination-active-bg: var(--prim-300);
+
+$pagination-hover-bg: var(--prim-200);
+
+// shadows
+$box-shadow: 0 0.5rem 1rem var(--shadow-color);
+$box-shadow-sm: 0 0.125rem 0.25rem var(--shadow-color);
+$box-shadow-lg: 0 1rem 3rem var(--shadow-color);
+
+// -------- utilities maps
+$utilities-text-colors: $custom-colors;
+$utilities-bg-colors: $custom-colors;
+$utilities-border-colors: $custom-colors;

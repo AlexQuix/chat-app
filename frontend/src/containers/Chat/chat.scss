@@ -1,0 +1,37 @@
+.message {
+	--bg-msg: var(--gray-600);
+
+	&--reverse {
+		--bg-msg: var(--prim-700);
+
+		flex-direction: row-reverse;
+		.message__text::before {
+			left: initial;
+			right: -18px;
+			transform: scaleX(-1);
+		}
+	}
+
+	&__text {
+		background: var(--bg-msg);
+
+		&::before {
+			--size: 22px;
+
+			content: "";
+			width: var(--size);
+			height: var(--size);
+			background: var(--bg-msg);
+			position: absolute;
+			top: 0;
+			left: -18px;
+
+			-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 50%);
+			clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 50%);
+		}
+
+		& p {
+			color: var(--text-clr);
+		}
+	}
+}
